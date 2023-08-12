@@ -97,7 +97,7 @@ const [depositedBCK, setDepositedBCK] = useState(0);
     
     fetchData(); // Fetch data immediately when component mounts
     
-    const interval = setInterval(fetchData, 50000); // Fetch data every 5 minutes
+    const interval = setInterval(fetchData, 20000); // Fetch data every 5 minutes
     
     return () => clearInterval(interval); // Clear the interval when the component unmounts
   }, []);
