@@ -7,25 +7,22 @@ export default function Liquidation() {
         Understanding Liquidations
       </p>
       <p className="mt-4 text-16 font-mont text-white-100 text-justify ">
-        Bound Finance operates on the principle of overcollateralized loans to maintain the value of our stablecoin. 
-        We currently enforce a 2:1 collateral ratio between BCKETH and BCK. This means for every $2 of BCKETH, there is $1 worth of BCK stablecoin.
+        Bound Finance's stability relies on overcollateralized loans. With a 2:1 collateral ratio, for every $2 in BCKETH, there's $1 of BCK stablecoin.
       </p>
       <br />
       <p className="text-16 font-mont text-justify">
-        If a vault's collateral ratio falls below this threshold, it is subject to liquidation by the Liquidation bot.
-        The BCKETH collateral underpinning the loan is then transferred to the Tap contract, where the collateral is sold off to restore the value of the BCK stablecoin debt.
+        Vaults falling below this ratio risk liquidation by our Liquidation bot, where their collateral is shifted to the Tap contract for sale, ensuring BCK stablecoin's value.
       </p>
       <br />
       <p className="text-16 font-mont text-justify">
-        When a user contributes BCKETH collateral, it is wrapped to create a new token called BETH. This approach safeguards the system in case there isn't sufficient collateral to cover bad debt—
-        i.e., debt incurred from liquidated vaults. In such a situation, we increase the BETH supply and sell enough of it to cover the BCK debt.
+        BCKETH collateral is wrapped into a safeguard token, BETH. If there's a shortage of collateral for bad debt, we raise the BETH supply, selling it to cover BCK debt.
       </p> 
       <br />
       <p className="text-16 font-mont text-justify">
-        After acquiring BETH, a user can convert it back into BCKETH. While the initial BETH to BCKETH ratio is 1:1, this ratio may increase if the BETH supply needs to be augmented to cover any bad debt.
-        Consequently, the amount of BCKETH a user can retrieve after converting BETH to BCKETH may decrease. This is the reason we wrap the collateral (BCKETH) into BETH: to create a mechanism for increasing supply to cover any debt in case the available collateral in the system is insufficient to cover bad debt.
+        While users can swap BETH back for BCKETH at an initial 1:1 rate, increased BETH supply to manage debt might reduce the BCKETH returned. This wrapping ensures we can adjust supply to handle unexpected debt scenarios.
       </p>
       <br />
     </div>
   );
 }
+
