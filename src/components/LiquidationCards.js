@@ -30,7 +30,7 @@ const fetchData = async () => {
 useEffect(() => {
   fetchData();
 
-  const interval = setInterval(fetchData, 500000); // Every 10 minutes
+  const interval = setInterval(fetchData, 20000); // Every 10 minutes
 
   return () => clearInterval(interval); // Clear the interval when the component unmounts
 }, []);
