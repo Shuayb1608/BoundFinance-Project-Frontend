@@ -706,8 +706,10 @@ export const DrawFunction = async () => {
 
     console.log(MaxDebtRounded, 'THE MAX DEBT ROUNDED');
     console.log(wad, "THE WAD")
+    const inputNumber = Number(wad) + Number(interestInEther);
+    console.log(inputNumber, "this is the input number");
 
-    if (Number(wad + interestInEther) > Number(MaxDebtRounded)) {
+    if (Number(inputNumber) > Number(MaxDebtRounded)) {
         Swal.fire({
             icon: 'warning',
             title: 'You cannot draw this much BCK, you will exceed the collateralisation ratio',
