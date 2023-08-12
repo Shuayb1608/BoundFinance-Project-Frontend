@@ -692,6 +692,8 @@ export const DrawFunction = async () => {
 
     const contract = await getContract();
     const result = await contract.methods.ink(cupIdInBytes32).call();
+    const interest = await getUserDebt(cupIdInBytes32);
+    const interestInEther = web3.utils.fromWei(interest.toString(), 'ether');
     const resultinEtherAmount = result * 10 ** -18;
     const mat = await contract.methods.mat().call();
     const price = await contract.methods.tag().call();
@@ -702,7 +704,10 @@ export const DrawFunction = async () => {
     const MaxDebt = resultinEtherAmount * priceadjusted / matAdjusted;
     const MaxDebtRounded = MaxDebt.toFixed(2);
 
-    if (Number(wad) > Number(MaxDebtRounded)) {
+    console.log(MaxDebtRounded, 'THE MAX DEBT ROUNDED');
+    console.log(wad, "THE WAD")
+
+    if (Number(wad + interestInEther) > Number(MaxDebtRounded)) {
         Swal.fire({
             icon: 'warning',
             title: 'You cannot draw this much BCK, you will exceed the collateralisation ratio',
