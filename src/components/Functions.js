@@ -742,6 +742,7 @@ export const DrawFunction = async () => {
 }
 
 
+
 export const WipeFunction = async () => {
     const wad = document.getElementById("wadInputwipe").value;
 
