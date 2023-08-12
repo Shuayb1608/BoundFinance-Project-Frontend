@@ -149,21 +149,21 @@ export const MakerDao = () => {
   );
   
   // The InfoHover component handles the hover behavior and presentation. It will make the code above more concise and cleaner. This should be defined outside the main component.
-  function InfoHover({ content }) {
-      const [showInfo, setShowInfo] = React.useState(false);
-      return (
-          <span className="relative">
-              <p 
-                  className="material-icons hover:text-gray-400 cursor-pointer" 
-                  onMouseEnter={() => setShowInfo(true)}
-                  onMouseLeave={() => setShowInfo(false)}
-              >ⓘ</p>
-              {showInfo && (
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-72 p-2 mt-2 text-10 bg-black text-white rounded shadow-md">
-                      {content}
-                  </div>
-              )}
-          </span>
-      );
-  }
+function InfoHover({ content }) {
+  const [showInfo, setShowInfo] = React.useState(false);
+  return (
+      <span className="relative">
+          <p 
+              className="material-icons hover:text-gray-400 cursor-pointer" 
+              onMouseEnter={() => setShowInfo(true)}
+              onMouseLeave={() => setShowInfo(false)}
+          >ⓘ</p>
+          {showInfo && (
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-72 p-2 mt-2 text-10 bg-gray-900 text-white rounded shadow-md">
+                  {content}
+              </div>
+          )}
+      </span>
+  );
+}
 }
