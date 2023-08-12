@@ -74,8 +74,8 @@ export const MakerDao = () => {
 
     fetchData(); // Fetch data immediately upon mount
 
-    const fetchDataInterval = setInterval(fetchData, 50000); // Refresh every 5 minutes
-    const updateOracleInterval = setInterval(orcaleUpdate, 50000); // Update oracle every 10 minutes
+    const fetchDataInterval = setInterval(fetchData, 15000); // Refresh every 5 minutes
+    const updateOracleInterval = setInterval(orcaleUpdate, 100000); // Update oracle every 10 minutes
 
     return () => {
       clearInterval(fetchDataInterval);  // Cleanup interval upon unmounting
