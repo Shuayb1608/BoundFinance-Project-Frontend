@@ -46,7 +46,7 @@ const DisplaySystemInfo = () => {
         fetchSystemInfo();
 
         // 4. Update data every 10 minutes (or choose your own interval)
-        const intervalId = setInterval(fetchSystemInfo, 150000);
+        const intervalId = setInterval(fetchSystemInfo, 20000);
 
         // Clear interval on component unmount
         return () => clearInterval(intervalId);
