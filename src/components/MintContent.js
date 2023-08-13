@@ -8,21 +8,22 @@ export default function MintContent() {
       </p>
 
       <ol className="list-decimal pl-5 mt-4 text-16 font-mont text-white-100 text-justify space-y-4">
-        <li>Firstly mint some BCKETH from the BCKETH tab, this is the collateral used to mint BCK stablecoins.</li>
+        <li>Mint BCKETH from the BCKETH tab; it's the collateral for BCK stablecoins.</li>
 
-        <li>Then you can lock BCKETH collateral using the Lock Function on the CDP page. The BCKETH is wrapped to BETH. We wrap BCKETH in order for the liquidation mechanics to work</li>
+        <li>Lock BCKETH on the CDP page. It gets wrapped to BETH for the liquidation mechanics purposes.</li>
 
-        <li>Now, you're ready to mint BCK. Ensure the amount you mint is below the max debt corresponding to the collateral you've pledged. This is vital due to the minimum collateralization ratio. Falling below this ratio exposes you to liquidation risks, with a penalty on the pledged collateral.</li>
+        <li>Mint BCK. Ensure the minted amount stays below the max debt relative to your collateral to avoid liquidation risks.</li>
 
-        <li>You can reduce your BCK position by invoking the "Pay Back BCK" function. You can also retrieve some BCKETH from your position. However, this is capped by the minimum collateralization ratio, assuming you still hold cryptocurrency.</li>
+        <li>Reduce BCK using "Pay Back BCK" or retrieve some BCKETH, but mind the minimum collateralization ratio.</li>
 
-        <li>Monitor your risk of liquidation through the Safe tab function.</li>
+        <li>Use the Safe tab to keep track of liquidation risks.</li>
 
-        <li>Post-loan, you won't incur interest. However, periodically, you'll earn ETH based on the pledged collateral amount. This interest can be withdrawn via the Collateral Interest tab.</li>
+        <li>No post-loan interest. Periodically earn ETH from collateral. Withdraw through the Collateral Interest tab.</li>
 
-        <li>Upon securing a fully overcollateralized position of BCK stablecoins, maximize yield by staking them in the BCK savings account. With BCK, the world is your oyster—use it as you would any other stablecoin!</li>
+        <li>With a fully overcollateralized BCK position, stake in the BCK savings account for yield. Use BCK like any other stablecoin.</li>
       </ol>
 
     </div>
   );
 }
+
