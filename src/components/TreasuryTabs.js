@@ -43,7 +43,7 @@ export default function TreasuryTabs() {
 
     fetchBalances();
 
-    const intervalForBalances = setInterval(fetchBalances, 7200000);
+    const intervalForBalances = setInterval(fetchBalances, 15000);
 
     return () => clearInterval(intervalForBalances);  // Cleanup for this useEffect
   }, []);
@@ -79,17 +79,16 @@ export default function TreasuryTabs() {
           </Tab>
         </Tabs>
         <div className="w-full max-w-[600px] mt-[50px] mb-[25px]">
-          <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 py-8 px-2">
             <div className="text-center w-full">
-              <p>Balance Of Staking LidoVault sTETH & ETH</p>
+              <p>Balance Of Staking LidoVault sTETH</p>
               
               <p className="text-skyblue font-bold text-2xl font-Helvetica">
                 {balanceErrorMessage 
                 ? balanceErrorMessage 
-                : `${parseFloat(balances.stETH).toFixed(2)} sTETH & ${parseFloat(balances.ETH).toFixed(2)} ETH`}
+                : `${parseFloat(balances.stETH).toFixed(2)} sTETH `}
               </p>
             </div>
-          </div>
+          
         </div>
       </div>
     </div>
