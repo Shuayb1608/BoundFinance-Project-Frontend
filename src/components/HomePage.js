@@ -61,7 +61,7 @@ const DisplaySystemInfo = () => {
                 <div className="flex flex-row items-center justify-center gap-8 flex-wrap mb-8">
                     <div className="text-center">
                         <p className="font-mont text-xl text-skyblue mb-2">Total Interest Distributed</p>
-                        <p className="text-gray-300 font-bold font-Helvetica text-4xl">~{interestDistributed} ETH</p>
+                        <p className="text-gray-300 font-bold font-Helvetica text-4xl">~ {interestDistributed} ETH</p>
                     </div>
                     <div className="text-center">
                         <p className="font-mont text-xl text-skyblue mb-2">BCKETH Collateral</p>
