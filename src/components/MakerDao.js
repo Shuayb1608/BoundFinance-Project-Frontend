@@ -100,8 +100,7 @@ export const MakerDao = () => {
                   <p className="text-36 text-gradient font-bold font-mont">Vault BCKETH-BCK</p>
                   <p className="text-16 font-mont text-white-100">Network : {activeChain ? activeChain : 'Connect Wallet'}</p>
               </div>
-              <p className="font-mont text-13 break-normal text-purple-300">Bound Finance | Crypto-Side</p>
-  
+              <p className="font-mont text-16 break-normal text-purple-300">Bound Finance | Crypto-Side</p>
               <div className="mt-7 flex flex-row items-center justify-center gap-10 flex-wrap">
   
                   <div className="text-center mt-4">
