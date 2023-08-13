@@ -78,7 +78,6 @@ const BCKETHTabs = () => {
               </Tabs>
 
               <div className="w-full max-w-[600px] mt-[50px] mb-[25px]">
-                  <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 py-8 px-2">
                       <div className="text-center w-full">
                           <p>Balance Of Reserve + BCKETH Contract</p>
                           <p className="text-skyblue font-bold text-2xl font-Helvetica">{combinedBalance} ETH</p>
@@ -86,7 +85,6 @@ const BCKETHTabs = () => {
                   </div>
               </div>
           </div>
-      </div>
   );
 };
 
