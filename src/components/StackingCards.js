@@ -97,7 +97,7 @@ const [depositedBCK, setDepositedBCK] = useState(0);
     
     fetchData(); // Fetch data immediately when component mounts
     
-    const interval = setInterval(fetchData, 15000); // Fetch data every 5 minutes
+    const interval = setInterval(fetchData, 50000); // Fetch data every 5 minutes
     
     return () => clearInterval(interval); // Clear the interval when the component unmounts
   }, []);
@@ -107,19 +107,17 @@ const [depositedBCK, setDepositedBCK] = useState(0);
     <div className="grid grid-cols-1 w-full max-w-[1449px] mt-[50px] mx-auto gap-5 p-4 md:grid-cols-2">
       <div className="w-full max-w-[600px] mx-auto">
         <div className="grid md:grid-cols-2 w-full gap-4">
-          <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 py-8 px-2">
             <div className="text-center w-full">
               <p>BCK Savings Account Balance</p>
 
               <p className="text-skyblue font-bold text-2xl font-bold font-Helvetica">${depositedBCK} BCK</p>
-            </div>
+            
           </div>
-          <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 py-8 px-2">
             <div className="text-center w-full">
               <p>USDC Interest Earnt</p>
 
               <p className="text-skyblue font-bold text-2xl font-bold font-Helvetica">${withdrawableInterest}</p>
-            </div>
+            
           </div>
         </div>
 
