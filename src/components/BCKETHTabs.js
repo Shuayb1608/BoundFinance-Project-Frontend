@@ -53,7 +53,7 @@ const BCKETHTabs = () => {
 
               {/* Display Withdrawal Request */}
               <div className="w-full max-w-[600px] mt-[30px] mb-[25px]">
-                  <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 py-8 px-2">
+
                       <div className="text-center w-full">
                           <p>Requested Withdrawable Funds</p>
                           <p className="text-skyblue font-bold text-2xl font-Helvetica">
@@ -63,7 +63,7 @@ const BCKETHTabs = () => {
                           </p>
                       </div>
                   </div>
-              </div>
+              
 
               <Tabs>
                   <Tab label="Create BCKETH">
