@@ -40,21 +40,18 @@ useEffect(() => {
       <div className="grid grid-cols-1 w-full max-w-[1449px] mt-[50px] mx-auto gap-5 p-4 md:grid-cols-2">
         <div className="w-full max-w-[600px] mx-auto">
           <div className="grid md:grid-cols-2 w-full gap-4">
-          <div className="cards_box text-white w-full shadow-cyan-200 shadow-lg rounded-[6px] text-16 flex items-center justify-center">
               <div className="text-center w-full p-3">
                 <p>Bad debt Amount In The System</p>
 
                 <p className="text-skyblue font-bold text-18 font-bold font-Helvetica text-2xl">${debtAmount} BCK</p>
 
-              </div>
             </div>
-            <div className="cards_box text-white shadow-cyan-200 shadow-lg rounded-[6px] text-16 flex items-center justify-center">
               <div className="text-center w-[100%] p-3">
                 <p>Collateral pending liquidation</p>
 
                 <p className="text-skyblue font-bold text-18 font-bold font-Helvetica text-2xl">{collateral} BETH</p>
 
-              </div>
+              
             </div>
           </div>
 
@@ -67,3 +64,4 @@ useEffect(() => {
     </div>
   );
 }
+
